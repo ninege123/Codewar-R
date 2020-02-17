@@ -1,0 +1,42 @@
+########## Summation##########
+summation <- function(n) {
+  # your code here
+  if(n > 0) {
+    sum(1 : n)
+  } else {
+    return(NULL) }
+}
+
+########## Testing 1-2-3 ##########
+number <- function(lines) {
+
+  if (length(lines) == 0) 
+    return(c()) 
+  
+  paste0(1 : length(lines), ": ", lines)
+}
+
+########## Vowel count ##########
+get_count <- function(input_str){
+  # Your code
+  vowels <- c("a", "e", "i", "o", "u")
+  letters <- strsplit(input_str, "")
+  
+  sum(unlist(letters) %in% vowels)
+}
+
+########## Even or Odd #########
+even_or_odd <- function(n) {
+  # your code here
+  if(n == round(n)) {
+  ifelse(n %% 2 == 0, "Even", "Odd")
+} else{
+print(NULL)}
+}
+
+
+
+
+
+
+
