@@ -34,7 +34,37 @@ even_or_odd <- function(n) {
 print(NULL)}
 }
 
+######### Sum of Digits / Digital Root #########
+digital_root <- function(n) {
+  if(n < 0) {
+    print(NULL)
+  } else {
+    if(length(as.numeric(unlist(strsplit(as.character(n), "")))) > 1) {
+    repeat{
+      n = sum(as.numeric(unlist(strsplit(as.character(n), ""))))
+      
+      if(length(as.numeric(unlist(strsplit(as.character(n), "")))) == 1) {
+        return(n)
+        break
+      }
+    }
+  } else {
+    return(n)
+  }
+    }
+}
 
+######### Detect Pangram ############
+is_pangram <- function(s){
+    # Your code here
+    s <- gsub(" ", "", s)
+    s <- gsub('[[:punct:]]+', "", s)
+    s <- gsub('[[:digit:]]+', "", s)
+    s <- tolower(s)
+    count <- 
+        sum(unique(unlist(strsplit(s, ""))) %in% letters)
+    ifelse(count == 26, TRUE, FALSE)
+}
 
 
 
